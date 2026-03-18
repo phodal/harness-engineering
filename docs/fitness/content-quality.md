@@ -24,13 +24,13 @@ metrics:
     tier: fast
 
   - name: readme_structure_exists
-    command: rg '^## ' README.md | wc -l | awk '{print "level2_sections:", $1}'
+    command: grep -c '^## ' README.md | awk '{print "level2_sections:", $1}'
     pattern: "level2_sections: ([1-9][0-9]*|[1-9])"
     hard_gate: false
     tier: fast
 
   - name: routa_reference_exists
-    command: rg -n 'Routa' README.md >/dev/null && echo "Routa referenced"
+    command: grep -n 'Routa' README.md >/dev/null && echo "Routa referenced"
     pattern: "Routa referenced"
     hard_gate: false
     tier: fast
