@@ -30,5 +30,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install fitness Python dependencies
+        run: python3 -m pip install -r docs/fitness/requirements.txt
+
       - name: Run checks
         run: npm run check

@@ -16,6 +16,7 @@
 在提交前，优先执行：
 
 ```bash
+python3 -m pip install -r docs/fitness/requirements.txt
 npm run fitness:dry-run
 ```
 

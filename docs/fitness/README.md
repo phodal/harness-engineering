@@ -5,6 +5,9 @@
 ## Quick Start
 
 ```bash
+# 首次执行时安装 Python 依赖
+python3 -m pip install -r docs/fitness/requirements.txt
+
 # 仅查看会执行什么
 python3 docs/fitness/scripts/fitness.py --dry-run
 
