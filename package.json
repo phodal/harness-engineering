@@ -1,0 +1,14 @@
+{
+  "name": "harness-driven-development",
+  "private": true,
+  "description": "Harness Engineering article repo with markdownlint and fitness bootstrap",
+  "scripts": {
+    "lint:md": "markdownlint-cli2 README.md AGENTS.md \"docs/**/*.md\"",
+    "fitness": "python3 docs/fitness/scripts/fitness.py",
+    "fitness:dry-run": "python3 docs/fitness/scripts/fitness.py --dry-run",
+    "check": "npm run lint:md && npm run fitness"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  }
+}
